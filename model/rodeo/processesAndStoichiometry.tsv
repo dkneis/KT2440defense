@@ -1,0 +1,10 @@
+name	expression	R	Bo	Bx	Bfs	Bff	F	X	description	unit
+grw_Bo	m * monod(R, hB, zB) * Bo	-1 / (yB * (1 + iyB * on(X, ty)))	1						see text	Bo cells /ml /h
+grw_Bx	m * cBx * monod(R, hB, zB) * Bx	-1 / (yB * (1 + iyB * on(X, ty)))		1					see text	Bx cells /ml /h
+grw_Bfs	m * cBf * monod(R, hB, zB) * Bfs	-1 / (yB * (1 + iyB * on(X, ty)))			-1	1			see text	Bfn equiv. /ml /h
+grw_Bff	m * cBf * monod(R, hB, zB) * Bff	-1 / (yB * (1 + iyB * on(X, ty)))			p	1-p			see text	Bact. single-cell equiv. /ml /h
+graz	g * monod(Bo+Bx+Bfs, hF, zF) * F * inh(X, micX)		-Bo/(Bo+Bx+Bfs)	-Bx/(Bo+Bx+Bfs)	-Bfs/(Bo+Bx+Bfs)		yF		see text	Bact. single cells /ml /h
+ureg	ku * Bo * on(Bo, tuB) * on(F, tuF)		-1	1					see text	Bo cells /ml /h
+dreg	kd * Bx * max(off(Bo, tuB), off(F, tuF))		1	-1					see text	Bx cells /ml /h
+excr	kx * Bx							1	see text	mass /ml /h
+fila	kf * (Bx + Bo) * on(X, tf)		-Bo/(Bo+Bx)	-Bx/(Bo+Bx)	1				see text	Bact. single cells /ml /h

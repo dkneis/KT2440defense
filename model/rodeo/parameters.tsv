@@ -1,0 +1,22 @@
+name	default	unit	description
+m	2	1 / h	Maximum growth rate constant of bacteria (all phenotypes)
+hB	344	ug R / mL	Monod constant for bacterial growth (all phenotypes)
+zB	2	ug R / mL	Minimum resource level for bacterial growth (all phenotypes)
+g	20	bacterial single cells / h	Maximum ingestion rate of a flagellate individual
+hF	1100000	bacterial single cells / mL	Monod constant for flagellate ingestion
+zF	450000	bacterial single cells / mL	Minimum prey density for flagellate ingestion
+yB	430000	bacterial cells / ug R	Yield of bacteria when ambient metabolite levels are low
+iyB	1	-	Relative increase in bacterial yield at high ambient metabolite concentrations
+yF	0.0028	flagellate cells / prey cells	Flagellates produced per ingested bacterial cells
+tuF	60000	flagellate cells / mL	Critical flagellate density to trigger upregulation of metabolite production
+tuB	980000	bacterial cells / mL	Critical bacterial density to trigger upregulation of metabolite production
+tf	8000000	mass / mL	Critical metabolite concentration to trigger filamentation
+ty	14400000	mass / mL	Metabolite concentration above which bacterial yield is increased
+micX	24400000	mass / mL	Minimum metabolite concentration to suppress flagellate growth
+ku	0.009	1 / h	Controls the upregulation of gene(s) mediating metabolite production
+kd	0.037	1 / h	Controls the downregulation of gene(s) mediating metabolite production
+kf	0.0005	1 / h	Controls the rate of bacterial mutations resulting in filamentation
+p	0.6	-	Probability of segregation during filament growth
+kx	1	mass / cell / h	Controls the amount of metabolites excreted by bacteria
+cBx	0.89	-	Fitness cost associated with metabolite production
+cBf	0.95	-	Fitness cost associated with filamentation

@@ -1,0 +1,8 @@
+name	unit	description	mobile
+R	ug / ml	Resource for bacterial growth	TRUE
+Bo	cells / ml	Density of single-cell bacteria not producing toxin	TRUE
+Bx			TRUE
+Bfs	cells / ml	Density of filamentous bacteria in single-cell state	TRUE
+Bff	cell eq. / ml	Density of mature bacteria filaments	TRUE
+F	cells / ml	Density of flagellates	TRUE
+X	ug / ml	Toxin causing growth inhibition of flagellates	TRUE

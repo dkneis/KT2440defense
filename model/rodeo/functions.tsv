@@ -1,0 +1,6 @@
+name	unit	description
+monod	-	monod model
+on	-	upward step with soft edges
+off	-	downward step with soft edges
+inh	-	mic inhibition model
+max	-	max
