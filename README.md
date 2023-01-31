@@ -55,7 +55,7 @@ Based on the measured volume/length of single cells, the data for the variable "
 
 ### Prerequisites
 
-The model was implemented in the [R language](www.r-project.org) and environment
+The model was implemented in the [R language](https://www.r-project.org) and environment
 for statistical computing. For solving simultaneous ODE numerically, we use the
 [deSolve package](https://CRAN.R-project.org/package=deSolve) package. In addition, we make use of the [rodeo package](https://CRAN.R-project.org/package=rodeo)
 written by the corresponding author. The latter serves two purposes:
@@ -70,7 +70,7 @@ written by the corresponding author. The latter serves two purposes:
 
 Thus, to execute the model source code provided here, you need the following free, open-source software:
 
-- A recent installation of [R](www.r-project.org)
+- A recent installation of [R](https://www.r-project.org)
 
 - The add-on package [deSolve](https://CRAN.R-project.org/package=deSolve)
 
