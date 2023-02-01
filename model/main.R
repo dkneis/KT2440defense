@@ -22,7 +22,7 @@ out <- NULL
 # simulate all experiments
 for (xps in colnames(experiments)) {
   vNames <- singleStepModel$namesVars()
-  sim <- multiStep(
+  sim <- multiStepSimulation(
     n=experiments["n", xps],  # number of transfers
     dt=experiments["dt", xps],  # interval between transfers
     pars=parameters,  # biological parameters

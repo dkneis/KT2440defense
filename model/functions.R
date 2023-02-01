@@ -24,7 +24,7 @@ buildSingleStepModel <- function(dir) {
 # Implements the model for multiple time steps; specifically, a series
 # of distinct transfers
 
-multiStep <- function(
+multiStepSimulation <- function(
   n,         # number of transfers
   dt,        # interval between transfers
   pars,      # biological parameters
