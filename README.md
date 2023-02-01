@@ -77,7 +77,7 @@ Thus, to execute the model source code provided here, you need the following fre
 - The add-on package [rodeo](https://CRAN.R-project.org/package=rodeo)
 
 - A Fortran compiler recognized by your R installation. On Linux-based systems,
-  you may want to install the [gfortran](https://gcc.gnu.org/wiki/GFortran) from
+  you may want to install [gfortran](https://gcc.gnu.org/wiki/GFortran) from
   the GNU compiler collection. On Windows, you probably want to use the
   [Rtools](https://cran.r-project.org/bin/windows/Rtools/) to have the compiler
   installed and set up.
@@ -105,6 +105,12 @@ Contains the model description in tabular form. The extension ".tsv" indicates t
 
 - File ```experiments.tsv```: Defines initial and boundary conditions for the set of experiments conducted. See above for an explanation of experiment identifiers. The example source code (see below) runs the model for all experimental setups defined in this file.
 
-- File ```functions.R```: Implements two functions. The 1st one constructs the model's equation system and to compiles the generated source code. The 2nd function makes it convenient to apply the model to a series of transfer events. As opposed to a continuous chemostat, initial conditions change abruptly at distinct transfer events.
+- File ```functions.R```: Implements two functions.
 
-- File ```main.R```: The main script to build, compile, and run the model for all experiments. It also plots the dynamics of all state variables in a basic fashion. 
+  1. The Function ```buildSingleStepModel``` constructs the model's equation system,
+  generates the respective Fortran code, and subsequently triggers compilation into a
+  shared library compliant with solvers from the ```deSolve``` package.
+  
+  2. The function ```multiStepSimulation``` makes it convenient to apply the model to a series of culture transfers where the values of state variables change instantaneously in response to dilution events. On every dilution event, integration of the ODE is paused and continued with updated initial conditions.
+
+- File ```main.R```: This is the all-in-one script to build, compile, and run the model for all experiments. It also plots the dynamics of all state variables in a basic manner. You could run this script, for example, from within a dedicated IDE (if any is installed) or by typing ```source("main.R")``` at the R prompt or by running the command ```Rscript --vanilla main.R``` within a terminal. Since all used file paths are relative, your working directory should generally be the one where the file ```main.R``` resides (i.e. the ```model``` folder).
