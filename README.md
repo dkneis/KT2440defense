@@ -3,7 +3,7 @@
 This repository contains observed data and model source code for the publication
 **"Shifts from cooperative to individual-based predation defense determine microbial predator-prey dynamics"** by
 Magali de la Cruz Barron, Ellen van Velzen, Uli Klümper, Markus Weitere, Thomas U. Berendonk, and David Kneis,
-published in the *ISME Journal*, 2023, [DOI: 10.1038/s41396-023-01381-5](htpps://doi.org/10.1038/s41396-023-01381-5).
+published in the *ISME Journal*, 2023, [DOI: 10.1038/s41396-023-01381-5](https://doi.org/10.1038/s41396-023-01381-5).
 
 Here, we provide the original observation data together with the source code of
 the ODE-based mathematical model presented in the publication. For any additional
